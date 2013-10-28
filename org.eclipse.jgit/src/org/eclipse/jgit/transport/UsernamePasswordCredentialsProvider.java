@@ -109,7 +109,7 @@ public class UsernamePasswordCredentialsProvider extends CredentialsProvider {
 				continue;
 			}
 			if (i instanceof CredentialItem.StringType) {
-				if (i.getPromptText().equals("Password: ")) { //$NON-NLS-1$
+				if (i.getPromptText().toLowerCase().contains("password")) { //$NON-NLS-1$
 					((CredentialItem.StringType) i).setValue(new String(
 							password));
 					continue;
